@@ -166,6 +166,25 @@
   </div>
 </section>
 
+<!-- 🔹 Картинки производства -->
+<section class="py-5 text-center bg-light">
+  <div class="container d-flex justify-content-center align-items-center gap-4 flex-wrap">
+    <img src="{{ url_for('static', filename='img/production1.png') }}" alt="Производство 1" class="img-production img-fluid rounded shadow zoom-img">
+    <img src="{{ url_for('static', filename='img/production2.png') }}" alt="Производство 2" class="img-production img-fluid rounded shadow zoom-img">
+  </div>
+</section>
+
+<style>
+  .img-production {
+    max-width: 48%;
+  }
+
+  @media (max-width: 768px) {
+    .img-production {
+      max-width: 90%;
+    }
+  }
+</style>
 
   <!-- 🔹 SEO текст -->
 <section class="py-5 bg-white">
