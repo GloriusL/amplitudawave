@@ -15,5 +15,20 @@ def robots():
 def sitemap():
     return send_from_directory(os.getcwd(), 'sitemap.xml')
 
+@app.route('/google90a2af5fc16f449f.html')
+def google_verification():
+    return 'google-site-verification: google90a2af5fc16f449f.html'
+
+@app.route('/yandex_8d8d6515a40fab06.html')
+def yandex_verification():
+    return '''
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        </head>
+        <body>Verification: 8d8d6515a40fab06</body>
+    </html>
+    '''
+
 if __name__ == '__main__':
     app.run(debug=True)
