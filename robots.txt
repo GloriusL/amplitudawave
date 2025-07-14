@@ -5,4 +5,4 @@ Disallow: /tmp/
 
 Allow: /
 
-Sitemap: https://yourdomain.ru/sitemap.xml
+Sitemap: https://amplitudavoln.ru/sitemap.xml
