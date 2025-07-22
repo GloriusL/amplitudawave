@@ -5,7 +5,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', canonical_url='https://amplitudavoln.ru/')
+
+@app.route('/volnovodnye-truby-med-latun/')
+def med_latun():
+    return render_template('med_latun.html', canonical_url='https://amplitudavoln.ru/volnovodnye-truby-med-latun/')
+
+@app.route('/Volnovodnye-truby-iz-alyuminievyh-splavov/')
+def alyuminii():
+    return render_template('alyuminii.html', canonical_url='https://amplitudavoln.ru/Volnovodnye-truby-iz-alyuminievyh-splavov/')
+
+@app.route('/zayavka/')
+def zayavka():
+    return render_template('zayavka.html', canonical_url='https://amplitudavoln.ru/zayavka/')
 
 @app.route('/robots.txt')
 def robots():

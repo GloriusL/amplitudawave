@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+Оставить заявку — АМПЛИТУДА ВОЛН
+{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Оставьте заявку на волноводные трубы или консультацию в компании АМПЛИТУДА ВОЛН. Свяжитесь с нами быстро и удобно.">
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">Оставьте заявку</h1>
+
+<form action="https://formspree.io/f/xblkrpne" method="POST" class="mx-auto" style="max-width: 600px;">
+  <div class="mb-3 text-start">
+    <label for="fio" class="form-label">ФИО *</label>
+    <input type="text" name="ФИО" id="fio" class="form-control" required>
+  </div>
+  <div class="mb-3 text-start">
+    <label for="email" class="form-label">E-mail *</label>
+    <input type="email" name="Email" id="email" class="form-control" required>
+  </div>
+  <div class="mb-3 text-start">
+    <label for="phone" class="form-label">Номер телефона</label>
+    <input type="tel" name="Телефон" id="phone" class="form-control">
+  </div>
+  <div class="mb-3 text-start">
+    <label for="message" class="form-label">Ваше сообщение *</label>
+    <textarea name="Сообщение" id="message" class="form-control" rows="4" required></textarea>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </div>
+</form>
+{% endblock %}
