@@ -13,7 +13,7 @@ def med_latun():
 
 @app.route('/Volnovodnye-truby-iz-alyuminievyh-splavov/')
 def alyuminii():
-    return render_template('alyuminii.html', canonical_url='https://amplitudavoln.ru/Volnovodnye-truby-iz-alyuminievyh-splavov/')
+    return render_template('alyuminii.html', canonical_url='https://amplitudavoln.ru/volnovodnye-truby-iz-alyuminievyh-splavov/')
 
 @app.route('/zayavka/')
 def zayavka():
