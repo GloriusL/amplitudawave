@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import os
 
 app = Flask(__name__)
@@ -11,9 +11,16 @@ def home():
 def med_latun():
     return render_template('med_latun.html', canonical_url='https://amplitudavoln.ru/volnovodnye-truby-med-latun/')
 
-@app.route('/Volnovodnye-truby-iz-alyuminievyh-splavov/')
+@app.route('/volnovodnye-truby-iz-alyuminievyh-splavov/')
 def alyuminii():
     return render_template('alyuminii.html', canonical_url='https://amplitudavoln.ru/volnovodnye-truby-iz-alyuminievyh-splavov/')
+
+@app.route('/Volnovodnye-truby-iz-alyuminievyh-splavov/')
+def alyuminii_old():
+    return redirect(
+        url_for('alyuminii'),
+        code=301
+    )
 
 @app.route('/zayavka/')
 def zayavka():
@@ -21,11 +28,11 @@ def zayavka():
 
 @app.route('/robots.txt')
 def robots():
-    return send_from_directory(os.getcwd(), 'robots.txt')
+    return send_from_directory(app.root_path, 'robots.txt')
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory(os.getcwd(), 'sitemap.xml')
+    return send_from_directory(app.root_path, 'sitemap.xml')
 
 @app.route('/google90a2af5fc16f449f.html')
 def google_verification():
